@@ -1,0 +1,310 @@
+/* configurações do site inteiro */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom right, #0820ac, #bacbe6);
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Título */
+.titulo-pagina {
+  text-align: center;
+  font-size: 2.8rem;
+  color: #e5e9f1ce;
+  margin-bottom: 30px;
+}
+
+/* Botões do topo */
+.topbar-opcoes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.btn-opcao {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #2563eb;
+  color: #fff;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-opcao:hover {
+  background-color: #133e9a;
+}
+
+/* Formulário */
+#formularioContainer {
+  background-color: #fff;
+  padding: 30px;
+  margin: 0 auto 40px auto;
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+#formularioContainer input,
+#formularioContainer select,
+#formularioContainer textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+#formularioContainer button {
+  width: 100%;
+  padding: 12px 20px;
+  background-color: #2563eb;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#formularioContainer button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Tabela */
+.tabela-tarefas {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.tabela-tarefas th,
+.tabela-tarefas td {
+  padding: 14px 18px;
+  text-align: center;
+  font-size: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+  vertical-align: middle;
+}
+
+.tabela-tarefas th {
+  background-color: #2563eb;
+  color: #fff;
+  font-weight: 700;
+}
+
+.tabela-tarefas tr:last-child td {
+  border-bottom: none;
+}
+
+.tabela-tarefas td.botoes-acoes {
+  min-width: 160px;
+}
+
+.botoes-acoes {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: nowrap;
+}
+
+/* Botões da tabela */
+.acao-btn {
+  padding: 10px 16px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: #fff;
+}
+
+.editar-btn {
+  background-color: #105cff9e;
+}
+
+.editar-btn:hover {
+  background-color: #0638a5;
+}
+
+.excluir-btn {
+  background-color: #02246dba;
+}
+
+.excluir-btn:hover {
+  background-color: #02246d;
+}
+
+
+.oculto {
+  display: none;
+}
+
+/*  pesquisa */
+.pesquisa-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.pesquisa-input {
+  width: 200px;
+  padding: 10px;
+  font-size: 14px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.pesquisa-btn {
+  padding: 10px 15px;
+  font-size: 14px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pesquisa-btn:hover {
+  background-color: #0056b3;
+}
+
+.destaque {
+  background-color: #5084f33c;
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 2px;
+}
+
+/*  página de estudo */
+.estudo-container {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 40px 30px;
+  background-color: #ffffffd8;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/*  titulo no cronometro*/
+.label-sessao {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #1e3a8a;
+  margin-bottom: 10px;
+}
+
+/* seletor de estudos */
+#selectSessao {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 30px;
+  border: 1px solid #5b94da;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+/* Numeros do cronômetro */
+#cronometroDisplay {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #0e162b;
+  margin: 20px 0 40px 0;
+}
+
+/* Botões do cronômetro */
+.botoes-cronometro {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.crono-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  background-color: #2563eb;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.crono-btn:hover {
+  background-color: #1e40af;
+}
+
+
+#btnVoltar {
+  margin-top: 30px;
+  background-color: #64748b;
+}
+
+#btnVoltar:hover {
+  background-color: #475569;
+}
+
+
+
+@media (max-width: 768px) {
+  .titulo-pagina {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .topbar-opcoes {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn-opcao {
+    font-size: 0.9rem;
+    padding: 10px 16px;
+  }
+
+  #formularioContainer {
+    padding: 20px;
+  }
+
+  .tabela-tarefas th,
+  .tabela-tarefas td {
+    font-size: 0.9rem;
+    padding: 12px 14px;
+  }
+
+  .botoes-acoes {
+    flex-direction: column;
+    gap: 6px;
+  }
+}

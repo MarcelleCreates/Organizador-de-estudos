@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tarefas</title>
+  <link rel="stylesheet" href="css/estilo.css" />
+</head>
+<body>
+  <div class="container">
+    <h1 class="titulo-pagina">Tarefas</h1>
+
+    <!-- Botões superiores -->
+    <div class="topbar-opcoes">
+      <button class="btn-opcao" onclick="window.location.href='inicio.html'">Início</button>
+      <button class="btn-opcao" id="btnCadastrarTarefa">Cadastrar Tarefa</button>
+      <button class="btn-opcao" onclick="window.location.href='estudos.html'">Sessão de Estudos</button>
+    </div>
+
+    <!-- Campo de pesquisa -->
+    <div class="pesquisa-container">
+      <input type="text" id="searchInput" placeholder="Buscar tarefas..." class="pesquisa-input" />
+      <button id="searchBtn" class="pesquisa-btn">Pesquisar</button>
+    </div>
+
+    <!-- Formulário de cadastro -->
+    <div id="formularioContainer" class="oculto">
+      <form id="formTarefa">
+        <input type="text" id="descricao" placeholder="Descrição da tarefa" required />
+        <input type="date" id="data" required />
+        <input type="text" id="materia" placeholder="Matéria" required />
+        <select id="status" required>
+          <option value="" disabled selected>Selecione o status</option>
+          <option value="Pendente">Pendente</option>
+          <option value="Em Andamento">Em Andamento</option>
+          <option value="Concluída">Concluída</option>
+        </select>
+        <button type="submit">Salvar</button>
+      </form>
+    </div>
+    
+
+    <!-- Tabela de tarefas -->
+    <table class="tabela-tarefas oculto" id="tabelaTarefas">
+      <thead>
+        <tr>
+          <th>Descrição</th>
+          <th>Data</th>
+          <th>Matéria</th>
+          <th>Status</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <!-- Script -->
+  <script src="js/tarefas.js"></script>
+</body>
+</html>

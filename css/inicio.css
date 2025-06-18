@@ -1,0 +1,91 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom right, #0820ac, #bacbe6);
+  color: #1f2937;
+  min-height: 100vh;
+}
+
+/*  boas-vindas */
+.bem-vindo {
+  background-color: white;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  border-radius: 1.5rem 1.5rem 0 0;
+  box-shadow: 0 0.75rem 1.5rem rgba(0,0,0,0.1);
+}
+
+.bem-vindo h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #01126f;
+}
+
+.bem-vindo p {
+  font-size: 1.2rem;
+  font-weight: bolder;
+  color: #1c1d51ad;
+  
+}
+
+/*  botoes de estudo e tarefas */
+.opcoes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px 20px;
+}
+
+.botao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 240px;
+  height: 240px;
+  background-color: white;
+  border: none;
+  border-radius: 1.5rem; 
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+  text-decoration: none;
+  color: #1f2937;
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: 20px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.botao:hover {
+  transform: scale(1.05);
+  background-color: #e0e7ff;
+}
+
+.botao span {
+  font-size: 1.4rem;
+  color: #1a166be3;
+  font-weight: bold;
+}
+
+.botao img {
+  width: 170px;
+  height: 170px;
+}
+
+
+
+@media (min-width: 768px) {
+  .opcoes {
+    flex-direction: row;
+  }
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sessão de Estudos</title>
+  <link rel="stylesheet" href="css/estilo.css" />
+</head>
+<body>
+  <div class="container">
+    <h1 class="titulo-pagina">Sessão de Estudos</h1>
+
+    <div class="topbar-opcoes">
+      <button class="btn-opcao" onclick="window.location.href='inicio.html'">Início</button>
+      <button class="btn-opcao" id="btnCadastrarEstudo">Cadastrar Sessão de Estudos</button>
+      <button class="btn-opcao" onclick="window.location.href='tarefas.html'">Tarefas</button>
+    </div>
+
+    <!-- Formulário de cadastro -->
+    <div id="formularioContainer" class="oculto">
+      <form id="formEstudo">
+        <input type="text" id="descricaoEstudo" placeholder="Descrição da sessão" required />
+        <input type="date" id="dataEstudo" required />
+        <input type="number" id="duracaoEstudo" placeholder="Duração em minutos" min="1" required />
+        <textarea id="observacoesEstudo" placeholder="Observações (opcional)"></textarea>
+        <button type="submit">Salvar</button>
+      </form>
+    </div>
+
+    <!-- Campo de pesquisa -->
+    <div class="pesquisa-container">
+      <input type="text" id="searchInputEstudo" placeholder="Buscar estudos..." class="pesquisa-input" />
+      <button id="searchBtnEstudo" class="pesquisa-btn">Pesquisar</button>
+    </div>
+
+    <div style="margin: 1rem 0;">
+  <button class="btn-opcao" onclick="window.location.href='estudocronometro.html'">Estudar Agora</button>
+</div>
+
+
+    <!-- Tabela de Estudos -->
+    <table class="tabela-tarefas" id="tabelaEstudos">
+      <thead>
+        <tr>
+          <th>Descrição</th>
+          <th>Data</th>
+          <th>Duração (min)</th>
+          <th>Observações</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script src="js/estudos.js"></script>
+</body>
+</html>
